@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * @author Pierrick Pujol
+ * @author HADHRI Anas
  */
 class KafkaHandlerConfig {
 

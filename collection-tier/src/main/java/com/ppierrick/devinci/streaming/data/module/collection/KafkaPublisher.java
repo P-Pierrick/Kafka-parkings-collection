@@ -13,6 +13,7 @@ import java.util.Properties;
 
 /**
  * @author Pierrick Pujol
+ * @author HADHRI Anas
  */
 class KafkaPublisher {
 

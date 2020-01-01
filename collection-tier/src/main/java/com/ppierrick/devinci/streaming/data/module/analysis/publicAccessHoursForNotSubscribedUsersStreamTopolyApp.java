@@ -12,6 +12,10 @@ import org.apache.kafka.streams.kstream.Produced;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * @author Pierrick Pujol
+ * @author HADHRI Anas
+ */
 public class publicAccessHoursForNotSubscribedUsersStreamTopolyApp {
 
 

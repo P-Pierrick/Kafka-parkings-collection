@@ -7,6 +7,7 @@ import java.util.concurrent.*;
 
 /**
  * @author Pierrick Pujol
+ * @author HADHRI Anas
  */
 class ScheduledExecutorRepeat {
 
@@ -31,7 +32,7 @@ class ScheduledExecutorRepeat {
 
     private class SchedulingTask implements Runnable {
 
-        private final CountDownLatch latch;dau
+        private final CountDownLatch latch;
 
         private SchedulingTask(CountDownLatch latch) {
             this.latch = latch;

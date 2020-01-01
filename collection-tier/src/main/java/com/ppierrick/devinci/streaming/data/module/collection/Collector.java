@@ -25,6 +25,7 @@ import java.util.stream.IntStream;
 
 /**
  * @author Pierrick Pujol
+ * @author HADHRI Anas
  */
 class Collector {
 

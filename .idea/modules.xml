@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Kafka-parkings-collection.iml" filepath="$PROJECT_DIR$/.idea/Kafka-parkings-collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection-tier/velib-collection-tier.iml" filepath="$PROJECT_DIR$/collection-tier/velib-collection-tier.iml" />
+    </modules>
+  </component>
+</project>

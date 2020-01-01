@@ -1,7 +1,6 @@
 package com.ppierrick.devinci.streaming.data.module.analysis;
 
 import org.apache.kafka.clients.consumer.*;
-import org.apache.kafka.common.serialization.LongDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
 import java.time.Duration;
@@ -11,19 +10,19 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author Pierrick Pujol
+ * @author HADHRI Anas
  */
-public class NbFreePlacesStreamAppConsumer {
-
+public class NbAndTypeAvailablePlacesAppConsumer {
     public static void main(String[] args) {
 
-        final String topic = "parking-nbfreeplaces-updates";
+        final String topic = "parking-typeandnbfreeplaces-updates";
 
         final Properties properties = new Properties();
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, "group-test-1");
         properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class.getName());
+        properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
 
         final Consumer<String, Long> consumer = new KafkaConsumer<>(properties);
         consumer.subscribe(Collections.singletonList(topic));
@@ -43,5 +42,4 @@ public class NbFreePlacesStreamAppConsumer {
             }
         }
     }
-
 }

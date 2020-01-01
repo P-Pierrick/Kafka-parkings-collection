@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author Pierrick Pujol
+ * @author HADHRI Anas
  */
 public class coordinatesStreamAppConsumer {
 
