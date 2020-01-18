@@ -1,6 +1,5 @@
 package com.ppierrick.devinci.streaming.data.module.analysis;
 
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -12,23 +11,16 @@ import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.Predicate;
 import org.apache.kafka.streams.kstream.Produced;
 
-
 import java.io.IOException;
 import java.util.Properties;
-
-
 
 /**
  * @author Pierrick Pujol
  * @author HADHRI Anas
  */
-/**
- * This class is responsible of creating new Topic that will contain:
- * The park name and the type of place (STANDARD-MOTOR_BIKE-ELECTRICAL_CAR) and the number of available
- * places per park name .
- */
-public class NbAndTypeAvailablePlacesStreamApp {
 
+//This class will create new topic from the first topic with only Standard counter Type ( using filter on the KStream)
+public class NbStandardCounterTypeAvailablePlacesStreamApp {
     public static void main(String[] args) {
         Properties config = new Properties();
 
@@ -37,14 +29,14 @@ public class NbAndTypeAvailablePlacesStreamApp {
         config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
         config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
-       // Delete cleanup policity in order to have no compacted kafka topics.
+        // Delete cleanup policity in order to have no compacted kafka topics.
         config.put(StreamsConfig.TOPIC_PREFIX + TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_DELETE);
 
 
-        NbAndTypeAvailablePlacesStreamApp nbAndTypeAvailablePlacesStreamApp = new NbAndTypeAvailablePlacesStreamApp();
+        NbStandardCounterTypeAvailablePlacesStreamApp nbStandardCounterTypeAvailablePlacesStreamApp= new NbStandardCounterTypeAvailablePlacesStreamApp();
 
         // In order to have a no compacted topic , we will add a config
-        KafkaStreams streams = new KafkaStreams(nbAndTypeAvailablePlacesStreamApp.createTopology(), config);
+        KafkaStreams streams = new KafkaStreams(nbStandardCounterTypeAvailablePlacesStreamApp.createTopology(), config);
         streams.start();
 
         Runtime.getRuntime().addShutdownHook(new Thread(streams::close));
@@ -70,12 +62,13 @@ public class NbAndTypeAvailablePlacesStreamApp {
         KStream<String, String> stats = builder.stream("parkings-saemes-stats-raw");
         KStream<String, String> parkingCountAndTypeStream = stats
                 .selectKey((key, jsonRecordString) -> extractParkingName(jsonRecordString))
-                .map((key, values) -> new KeyValue<>(key, extractPlaceTypeAndNumberFromJsonNode(values)));
+                .map((key, values) -> new KeyValue<>(key, extractPlaceTypeAndNumberFromJsonNode(values))).filter(
+                        new Predicate<String, String>() {
+                            @Override public boolean test(String key, String value) { return value.contains("STANDARD");
 
-        parkingCountAndTypeStream.to("parking-typeandnbfreeplaces-updates", Produced.with(stringSerde, typeAndNbCounterPlace));
+                            } });;
 
-
-
+        parkingCountAndTypeStream.to("parking-nbfreestandardplaces-updates", Produced.with(stringSerde, typeAndNbCounterPlace));
 
         return builder.build();
     }
@@ -107,6 +100,5 @@ public class NbAndTypeAvailablePlacesStreamApp {
         JsonNode parkingNameNode = fieldsMode.get("nom_parking");
         return parkingNameNode.asText();
     }
-
 
 }
