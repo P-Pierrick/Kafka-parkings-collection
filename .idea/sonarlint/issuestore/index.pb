@@ -13,3 +13,15 @@ acollection-tier/src/main/java/com/ppierrick/devinci/streaming/data/module/colle
 qcollection-tier/src/main/java/com/ppierrick/devinci/streaming/data/module/collection/ScheduledExecutorRepeat.java,3/0/30cda412a12ac73395419147419fba6228fd147f
 ©
 ycollection-tier/src/main/java/com/ppierrick/devinci/streaming/data/module/analysis/NbAndTypeAvailablePlacesStreamApp.java,d/b/db0c2d1bd76abe08390d2df6909087eb29a3e600
+§
+tcollection-tier/src/main/java/com/ppierrick/devinci/streaming/data/module/analysis/coordinatesStreamAppConsumer.java,f/7/f7e30e0503a8513878d35bc02701272c8dfc9009
+æ
+çcollection-tier/src/main/java/com/ppierrick/devinci/streaming/data/module/analysis/publicAccessHoursForNotSubscribedUsersStreamTopolyApp.java,e/e/ee7d3351fed7a56f5807616d71803deb44a7b880
+ì
+ccollection-tier/src/main/java/com/ppierrick/devinci/streaming/data/module/collection/Collector.java,b/6/b6ca8fd3c9ea660bc7e333783fbdb16dd26fdadb
+ú
+lcollection-tier/src/main/java/com/ppierrick/devinci/streaming/data/module/collection/KafkaHandlerConfig.java,a/6/a66b6a482db8fd5231a98f324f252d659ab98c85
+û
+ncollection-tier/src/main/java/com/ppierrick/devinci/streaming/data/module/collection/RawDataConsumerUtils.java,b/d/bda97836cf07a2cf1e65bc09d42aca27e38191bd
+ò
+hcollection-tier/src/main/java/com/ppierrick/devinci/streaming/data/module/collection/KafkaPublisher.java,6/2/629743927adc3d04781e02e4f9ab4bbb698c7350

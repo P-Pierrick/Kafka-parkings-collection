@@ -16,7 +16,7 @@ import java.util.Properties;
  * @author Pierrick Pujol
  * @author HADHRI Anas
  */
-public class publicAccessHoursForNotSubscribedUsersStreamTopolyApp {
+public class PublicAccessHoursForNotSubscribedUsersStreamTopolyApp {
 
 
     public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class publicAccessHoursForNotSubscribedUsersStreamTopolyApp {
         config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
 
-        publicAccessHoursForNotSubscribedUsersStreamTopolyApp dockCountApp = new publicAccessHoursForNotSubscribedUsersStreamTopolyApp();
+        PublicAccessHoursForNotSubscribedUsersStreamTopolyApp dockCountApp = new PublicAccessHoursForNotSubscribedUsersStreamTopolyApp();
 
         KafkaStreams streams = new KafkaStreams(dockCountApp.createTopology(), config);
         streams.start();

@@ -1,11 +1,11 @@
 
+Fsquid:S1148N"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ίγΠ—φ-
 V
-squid:S106*"9Replace this use of System.out or System.err by a logger.(™ΐ8ίγΠ—φ-
-msquid:S2095$"JUse try-with-resources or close this "KafkaStreams" in a "finally" clause.( °’ύÿÿÿÿ8ίγΠ—φ-
-Jsquid:S1612*",Replace this lambda with a method reference.(™ΐ8ίγΠ—φ-
-dsquid:S2142-"FEither re-interrupt this method or rethrow the "InterruptedException".(δ Ή€8ίγΠ—φ-
-Esquid:S2189)""Add an end condition to this loop.(οÿÿÿÿÿ8ίγΠ—φ-
-Fsquid:S1148Y"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ίγΠ—φ-
-isquid:S2259L"FA "NullPointerException" could be thrown; "jsonNode" is nullable here.(Φ¦ά—ύÿÿÿÿ8ίγΠ—φ-
-csquid:S2259["FA "NullPointerException" could be thrown; "jsonNode" is nullable here.(ά½Υn8ίγΠ—φ-
-Fsquid:S1148J"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ίγΠ—φ-
+squid:S106."9Replace this use of System.out or System.err by a logger.(™ΐ8ίγΠ—φ-
+Fsquid:S1148]"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ίγΠ—φ-
+Jsquid:S1612.",Replace this lambda with a method reference.(™ΐ8ίγΠ—φ-
+isquid:S2259P"FA "NullPointerException" could be thrown; "jsonNode" is nullable here.(Φ¦ά—ύÿÿÿÿ8ίγΠ—φ-
+csquid:S2259_"FA "NullPointerException" could be thrown; "jsonNode" is nullable here.(ά½Υn8ίγΠ—φ-
+msquid:S2095("JUse try-with-resources or close this "KafkaStreams" in a "finally" clause.( °’ύÿÿÿÿ8ίγΠ—φ-
+dsquid:S21421"FEither re-interrupt this method or rethrow the "InterruptedException".(δ Ή€8ίγΠ—φ-
+Esquid:S2189-""Add an end condition to this loop.(οÿÿÿÿÿ8ίγΠ—φ-

@@ -16,7 +16,7 @@ import java.util.Properties;
  * @author Pierrick Pujol
  * @author HADHRI Anas
  */
-public class coordinatesStreamTopologyApp {
+public class CoordinatesStreamTopologyApp {
 
 
     public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class coordinatesStreamTopologyApp {
         config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
 
-        coordinatesStreamTopologyApp dockCountApp = new coordinatesStreamTopologyApp();
+        CoordinatesStreamTopologyApp dockCountApp = new CoordinatesStreamTopologyApp();
 
         KafkaStreams streams = new KafkaStreams(dockCountApp.createTopology(), config);
         streams.start();

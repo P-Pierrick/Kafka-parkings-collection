@@ -4,11 +4,13 @@ package com.ppierrick.devinci.streaming.data.module.analysis;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.common.config.TopicConfig;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.*;
 import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.Produced;
+
 
 import java.io.IOException;
 import java.util.Properties;
@@ -34,9 +36,13 @@ public class NbAndTypeAvailablePlacesStreamApp {
         config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
         config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
+       // Delete cleanup policity in order to have no compacted kafka topics.
+        config.put(StreamsConfig.TOPIC_PREFIX + TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_DELETE);
+
 
         NbAndTypeAvailablePlacesStreamApp nbAndTypeAvailablePlacesStreamApp = new NbAndTypeAvailablePlacesStreamApp();
 
+        // In order to have a no compacted topic , we will add a config
         KafkaStreams streams = new KafkaStreams(nbAndTypeAvailablePlacesStreamApp.createTopology(), config);
         streams.start();
 

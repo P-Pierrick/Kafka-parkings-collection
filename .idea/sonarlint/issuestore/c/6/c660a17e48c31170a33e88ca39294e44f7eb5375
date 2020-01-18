@@ -1,15 +1,18 @@
 
-[squid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-isquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨«Èşÿÿÿÿ
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-csquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ä¨¶’
-Asquid:S1612",Replace this lambda with a method reference.(™œÀ
-isquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã«‡Ñşÿÿÿÿ
-xsquid:S1488"cImmediately return this expression instead of assigning it to the temporary variable "coordinates".(£ŸÉØ
-lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒŞ¹Ëÿÿÿÿÿ
-Isquid:EmptyStatementUsageCheck"Remove this empty statement.( ¥‹•ûÿÿÿÿ
-Isquid:EmptyStatementUsageCheck"Remove this empty statement.(ÒŞ¹Ëÿÿÿÿÿ
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(™œÀ
-<squid:S2189""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ
+?squid:S1148F"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+ksquid:S00100@"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã«‡Ñşÿÿÿÿ
+Ksquid:EmptyStatementUsageCheck]"Remove this empty statement.(ÒŞ¹Ëÿÿÿÿÿ
+>squid:S2189%""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ
+csquid:S2259W"FA "NullPointerException" could be thrown; "jsonNode" is nullable here.(Ü½Õn8¥ƒ’ù-
+msquid:S2095 "JUse try-with-resources or close this "KafkaStreams" in a "finally" clause.(Ÿ™å˜ıÿÿÿÿ8¥ƒ’ù-
+esquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ä¨¶’
+?squid:S1148U"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+ksquid:S00100O"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨«Èşÿÿÿÿ
+nsquid:S00117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒŞ¹Ëÿÿÿÿÿ
+Csquid:S1612&",Replace this lambda with a method reference.(™œÀ
+O
+squid:S106&"9Replace this use of System.out or System.err by a logger.(™œÀ
+csquid:S2259H"FA "NullPointerException" could be thrown; "jsonNode" is nullable here.(Ü½Õn8¥ƒ’ù-
+Ksquid:EmptyStatementUsageCheck["Remove this empty statement.( ¥‹•ûÿÿÿÿ
+]squid:S2142)"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
+zsquid:S1488_"cImmediately return this expression instead of assigning it to the temporary variable "coordinates".(£ŸÉØ

@@ -12,11 +12,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Pierrick Pujol
  * @author HADHRI Anas
  */
-public class publicAccessHoursForNotSubscribedUsersStreamAppConsumer {
+public class CoordinatesStreamAppConsumer {
 
     public static void main(String[] args) {
 
-        final String topic = "parking-publicAccessHoursForNotSubscribedUsers-updates";
+        final String topic = "parking-coordinates-updates";
 
         final Properties properties = new Properties();
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
